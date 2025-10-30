@@ -4,7 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>JavaScript Homework 11 - HTTP Requests</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/izitoast/dist/css/iziToast.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/simplelightbox/dist/simple-lightbox.min.css"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -12,8 +20,23 @@
 
     <main>
       <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
+      <div class="container">
+        <h1>Image Search</h1>
+
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search for images..."
+            required
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <div id="loader" class="loader hidden"></div>
+
+        <div id="gallery" class="gallery"></div>
+      </div>
     </main>
 
     <load src="./partials/footer.html" />
